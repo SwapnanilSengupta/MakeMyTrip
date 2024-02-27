@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-02-27T09:12:47 IST" name="Suite" finished-at="2024-02-27T09:16:33 IST" duration-ms="225474">
+    <groups>
+      <group name="regression">
+        <method signature="TC_002_Gift_Card.enter_wrong_info()[pri:0, instance:testCases.TC_002_Gift_Card@1fa1cab1]" name="enter_wrong_info" class="testCases.TC_002_Gift_Card"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="TC_001_Book_SUV.search()[pri:0, instance:testCases.TC_001_Book_SUV@21ba0741]" name="search" class="testCases.TC_001_Book_SUV"/>
+        <method signature="TC_003_Count_AdultCount.adultCount()[pri:0, instance:testCases.TC_003_Count_AdultCount@70f02c32]" name="adultCount" class="testCases.TC_003_Count_AdultCount"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2024-02-27T09:12:47 IST" name="Test" finished-at="2024-02-27T09:16:33 IST" duration-ms="225474">
+      <class name="testCases.TC_002_Gift_Card">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TC_002_Gift_Card@1fa1cab1]" started-at="2024-02-27T09:14:32 IST" name="setup" finished-at="2024-02-27T09:15:12 IST" duration-ms="40047" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="enter_wrong_info()[pri:0, instance:testCases.TC_002_Gift_Card@1fa1cab1]" started-at="2024-02-27T09:15:12 IST" name="enter_wrong_info" finished-at="2024-02-27T09:15:48 IST" duration-ms="35752" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enter_wrong_info -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC_002_Gift_Card@1fa1cab1]" started-at="2024-02-27T09:15:48 IST" name="teardown" finished-at="2024-02-27T09:15:52 IST" duration-ms="3902" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testCases.TC_002_Gift_Card -->
+      <class name="testCases.TC_003_Count_AdultCount">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TC_003_Count_AdultCount@70f02c32]" started-at="2024-02-27T09:15:52 IST" name="setup" finished-at="2024-02-27T09:16:27 IST" duration-ms="35336" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="adultCount()[pri:0, instance:testCases.TC_003_Count_AdultCount@70f02c32]" started-at="2024-02-27T09:16:27 IST" name="adultCount" finished-at="2024-02-27T09:16:30 IST" duration-ms="2746" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- adultCount -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC_003_Count_AdultCount@70f02c32]" started-at="2024-02-27T09:16:30 IST" name="teardown" finished-at="2024-02-27T09:16:33 IST" duration-ms="2803" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testCases.TC_003_Count_AdultCount -->
+      <class name="testCases.TC_001_Book_SUV">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TC_001_Book_SUV@21ba0741]" started-at="2024-02-27T09:12:48 IST" name="setup" finished-at="2024-02-27T09:14:02 IST" duration-ms="73766" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="search()[pri:0, instance:testCases.TC_001_Book_SUV@21ba0741]" started-at="2024-02-27T09:14:02 IST" name="search" finished-at="2024-02-27T09:14:20 IST" duration-ms="17354" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC_001_Book_SUV@21ba0741]" started-at="2024-02-27T09:14:20 IST" name="teardown" finished-at="2024-02-27T09:14:32 IST" duration-ms="12450" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testCases.TC_001_Book_SUV -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
