@@ -13,7 +13,7 @@ public class BookCabPage extends BasePage {
 	@FindBy(xpath = "//p[@class='latoBold font20 appendTop10 appendBottom20']")
 	WebElement filter_label_validation;
 
-	@FindBy(xpath = "//*[@id=\"root\"]/div/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/span/label")
+	@FindBy(xpath ="//label[normalize-space()='SUV']")
 	WebElement suv_checkBox;
 
 	@FindBy(xpath = "//div[@id='List']//div[1]//div[1]//div[3]//div[1]//div[2]//div[1]//p[1]")

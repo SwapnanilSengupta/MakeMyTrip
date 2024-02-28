@@ -23,6 +23,7 @@ public class TC_001_Book_SUV extends BaseClass {
 		sp.SetTime();
 		sp.clickSearch();
 		Assert.assertEquals("Select Filters", bcp.validatePage());
+		Thread.sleep(5000);
 		bcp.click_checkbox_of_SUV();
 		bcp.ScrollTillLowestSUVTab();
 		Thread.sleep(2000);

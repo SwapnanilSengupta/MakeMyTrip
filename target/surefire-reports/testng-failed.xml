@@ -6,13 +6,6 @@
   </listeners>
   <test thread-count="5" name="Test(failed)" verbose="0">
     <classes>
-      <class name="testCases.TC_002_Gift_Card">
-        <methods>
-          <include name="teardown"/>
-          <include name="enter_wrong_info"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- testCases.TC_002_Gift_Card -->
       <class name="testCases.TC_001_Book_SUV">
         <methods>
           <include name="teardown"/>
@@ -20,13 +13,6 @@
           <include name="search"/>
         </methods>
       </class> <!-- testCases.TC_001_Book_SUV -->
-      <class name="testCases.TC_003_Count_AdultCount">
-        <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-          <include name="adultCount"/>
-        </methods>
-      </class> <!-- testCases.TC_003_Count_AdultCount -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

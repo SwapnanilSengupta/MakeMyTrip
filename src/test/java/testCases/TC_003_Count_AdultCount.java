@@ -16,6 +16,6 @@ public class TC_003_Count_AdultCount extends BaseClass {
 		System.out.println("Total Adult Count :" + sp.getAdultCount());
 		String actual_value = Integer.toString(sp.getAdultCount());
 		sp.click_guest_apply();
-		Assert.assertEquals(actual_value, "40");
+		Assert.assertEquals(actual_value,"40");
 	}
 }
