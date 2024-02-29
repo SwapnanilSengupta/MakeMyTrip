@@ -7,7 +7,7 @@ import pageObjects.SearchPage;
 import testBase.BaseClass;
 
 public class TC_003_Count_AdultCount extends BaseClass {
-	@Test(enabled = true,groups= {"smoke"})
+	@Test(enabled = true, groups = { "smoke" })
 	public void adultCount() throws InterruptedException {
 		SearchPage sp = new SearchPage(driver);
 		Thread.sleep(2000);
@@ -16,6 +16,6 @@ public class TC_003_Count_AdultCount extends BaseClass {
 		System.out.println("Total Adult Count :" + sp.getAdultCount());
 		String actual_value = Integer.toString(sp.getAdultCount());
 		sp.click_guest_apply();
-		Assert.assertEquals(actual_value,"40");
+		Assert.assertEquals(actual_value, "40");
 	}
 }

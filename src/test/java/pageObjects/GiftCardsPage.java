@@ -13,7 +13,7 @@ public class GiftCardsPage extends BasePage {
 	@FindBy(xpath = "//*[@id=\"top-banner\"]/div[2]/div/div[1]/div[2]/div[2]/div[3]/ul/li[3]/div/img")
 	WebElement birthday_gift_card;
 
-	@FindBy(name ="senderName")
+	@FindBy(name = "senderName")
 	WebElement senderName;
 
 	@FindBy(name = "senderMobileNo")

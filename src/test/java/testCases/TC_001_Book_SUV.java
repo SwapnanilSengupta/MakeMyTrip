@@ -8,7 +8,7 @@ import pageObjects.SearchPage;
 import testBase.BaseClass;
 
 public class TC_001_Book_SUV extends BaseClass {
-	@Test(enabled = true,groups= {"smoke"})
+	@Test(enabled = true, groups = { "smoke" })
 	public void search() throws InterruptedException {
 		SearchPage sp = new SearchPage(driver);
 		BookCabPage bcp = new BookCabPage(driver);
@@ -23,10 +23,10 @@ public class TC_001_Book_SUV extends BaseClass {
 		sp.SetTime();
 		sp.clickSearch();
 		Assert.assertEquals("Select Filters", bcp.validatePage());
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		bcp.click_checkbox_of_SUV();
 		bcp.ScrollTillLowestSUVTab();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		System.out.println("MINIMUM PRICE OF SUV :" + bcp.minimum_price());
 	}
 }

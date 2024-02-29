@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="os" value="Mac"/>
   <parameter name="browser" value="Chrome"/>
   <listeners>
     <listener class-name="utilities.ExtentReportManager"/>
@@ -14,6 +15,20 @@
           <include name="adultCount"/>
         </methods>
       </class> <!-- testCases.TC_003_Count_AdultCount -->
+      <class name="testCases.TC_002_Gift_Card">
+        <methods>
+          <include name="teardown"/>
+          <include name="enter_wrong_info"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.TC_002_Gift_Card -->
+      <class name="testCases.TC_001_Book_SUV">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="search"/>
+        </methods>
+      </class> <!-- testCases.TC_001_Book_SUV -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

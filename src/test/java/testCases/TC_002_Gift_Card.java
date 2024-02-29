@@ -14,25 +14,25 @@ import testBase.BaseClass;
 import utilities.ExcelUtility;
 
 public class TC_002_Gift_Card extends BaseClass {
-	@Test(enabled =true,groups={"regression"})
+	@Test(enabled = true, groups = { "regression" })
 	public void enter_wrong_info() throws InterruptedException, IOException {
 		SearchPage sp = new SearchPage(driver);
 		sp.ScrollTillGiftCardTab();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		sp.click_gift_card();
 		Set<String> win_handles = driver.getWindowHandles();
 		List<String> win_handles_list = new ArrayList<String>(win_handles);
 		GiftCardsPage gcp = new GiftCardsPage(driver.switchTo().window(win_handles_list.get(1)));
 		Thread.sleep(2000);
 		gcp.ScrollTillBirthDayCardTab();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		gcp.click_birthday_gift_card();
-		ExcelUtility eu=new ExcelUtility("C:\\Users\\2310300\\eclipse-workspace\\Cognizant_Hackathon_Make_My_Trip\\ExcelSheets\\User_Credential.xlsx");
-		int row_num=eu.getRowCount("Sheet1");
-		for(int i=1;i<=row_num;i++)
-		{
+		ExcelUtility eu = new ExcelUtility(
+				"C:\\Users\\2310300\\eclipse-workspace\\Cognizant_Hackathon_Make_My_Trip\\ExcelSheets\\User_Credential.xlsx");
+		int row_num = eu.getRowCount("Sheet1");
+		for (int i = 1; i <= row_num; i++) {
 			gcp.setName(eu.getCellData("Sheet1", i, 0));
-			String name=eu.getCellData("Sheet1", i, 0).toString();
+			String name = eu.getCellData("Sheet1", i, 0).toString();
 			gcp.setMobileNumber(eu.getCellData("Sheet1", i, 1));
 			gcp.setEmailId(eu.getCellData("Sheet1", i, 2));
 			gcp.clickBuy();
@@ -40,7 +40,6 @@ public class TC_002_Gift_Card extends BaseClass {
 			String message = gcp.getErrorEmailMessage();
 			captureScreenShot(name);
 			Assert.assertEquals(message, "Please enter a valid Email id.");
-			refresh();
 		}
 	}
 }
