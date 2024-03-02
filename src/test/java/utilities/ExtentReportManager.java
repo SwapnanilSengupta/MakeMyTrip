@@ -26,7 +26,7 @@ public class ExtentReportManager implements ITestListener {
 	public ExtentSparkReporter sparkReporter;
 	public ExtentReports extent;
 	public ExtentTest test;
-
+	int counter=0;
 	String repName;
 
 	public void onStart(ITestContext testContext) {
@@ -37,7 +37,7 @@ public class ExtentReportManager implements ITestListener {
 
 		sparkReporter.config().setDocumentTitle("MakeMyTrip Automation Report"); // Title of report
 		sparkReporter.config().setReportName("MakeMyTrip Functional Testing"); // name of the report
-		sparkReporter.config().setTheme(Theme.STANDARD);
+		sparkReporter.config().setTheme(Theme.DARK);
 
 		extent = new ExtentReports();
 		extent.attachReporter(sparkReporter);
@@ -75,9 +75,11 @@ public class ExtentReportManager implements ITestListener {
 		test.log(Status.FAIL, result.getName() + " got failed");
 		test.log(Status.INFO, result.getThrowable().getMessage());
 		try {
-			BaseClass.captureScreenhotOnFailure();
+			counter+=1;
+			String error="error"+counter;
+			BaseClass.captureScreenhotOnFailure(error);
 			test.addScreenCaptureFromPath(
-					"C:\\Users\\2310300\\eclipse-workspace\\Cognizant_Hackathon_Make_My_Trip\\ScreenShots\\error.png");
+					"C:\\Users\\2310300\\eclipse-workspace\\Cognizant_Hackathon_Make_My_Trip\\ScreenShots\\"+error+".png");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

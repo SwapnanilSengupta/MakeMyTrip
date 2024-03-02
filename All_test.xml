@@ -5,8 +5,8 @@
 		<listener class-name="utilities.ExtentReportManager" />
 	</listeners>
 	<parameter name="browser" value="Chrome" />
-	<parameter name="os" value="Window"/>
-	<parameter name="enviroment" value="local"/>
+	<parameter name="os" value="Window" />
+	<parameter name="enviroment" value="Local" />
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="testCases.TC_001_Book_SUV" />

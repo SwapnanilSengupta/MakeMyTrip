@@ -27,27 +27,29 @@ public class BaseClass {
 	@BeforeClass()
 	@Parameters({ "browser", "os", "enviroment" })
 	public void setup(String browser, String os, String env) throws MalformedURLException {
+		
 		DesiredCapabilities cap = new DesiredCapabilities();
-		if (env.equals("local")) {
-			if (browser.equals("Chrome")) {
+		if (env.equalsIgnoreCase("local")) {
+			if (browser.equalsIgnoreCase("Chrome")) {
 				driver = new ChromeDriver();
-			} else if (browser.equals("Edge")) {
+			} else if (browser.equalsIgnoreCase("Edge")) {
 				driver = new EdgeDriver();
 			} else {
 				System.out.println("ERROR!!!!!!!!!");
 			}
-		} else if (env.equals("remote")) {
+			// Below Code is for Selenium Grid if the enviroment is set to remote
+		} else if (env.equalsIgnoreCase("remote")) {
 			if (browser.equals("Chrome")) {
 				cap.setBrowserName("chrome");
-			} else if (browser.equals("Edge")) {
+			} else if (browser.equalsIgnoreCase("Edge")) {
 				cap.setBrowserName("MicrosoftEdge");
 			} else {
 				System.out.println("ERROR!!!!!!!!!");
 			}
 
-			if (os.equals("Window")) {
+			if (os.equalsIgnoreCase("Window")) {
 				cap.setPlatform(Platform.WIN11);
-			} else if (os.equals("Mac")) {
+			} else if (os.equalsIgnoreCase("Mac")) {
 				cap.setPlatform(Platform.MAC);
 			} else {
 				System.out.println("ERROR!!!!!!!!!");
@@ -61,19 +63,20 @@ public class BaseClass {
 		driver.get("https://www.makemytrip.com/");
 		driver.manage().window().maximize();
 	}
-
-	public void captureScreenShot(String user) throws IOException {
+	
+	//for caputuring screenshot
+	public void captureScreenShot(String file) throws IOException {
 		WebElement specific_location = driver.findElement(By.xpath("//div[@class='deliver__content']"));
 		File src = specific_location.getScreenshotAs(OutputType.FILE);
 		File trg = new File("C:\\Users\\2310300\\eclipse-workspace\\Cognizant_Hackathon_Make_My_Trip\\ScreenShots\\"
-				+ user + ".png");
+				+ file + ".png");
 		FileUtils.copyFile(src, trg);
 	}
 
-	public static void captureScreenhotOnFailure() throws IOException {
+	public static void captureScreenhotOnFailure(String file) throws IOException {
 		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(screenshot, new File(
-				"C:\\Users\\2310300\\eclipse-workspace\\Cognizant_Hackathon_Make_My_Trip\\ScreenShots\\error.png"));
+				"C:\\Users\\2310300\\eclipse-workspace\\Cognizant_Hackathon_Make_My_Trip\\ScreenShots\\"+file+".png"));
 	}
 
 	public void refresh() {

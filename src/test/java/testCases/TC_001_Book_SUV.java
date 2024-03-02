@@ -10,23 +10,49 @@ import testBase.BaseClass;
 public class TC_001_Book_SUV extends BaseClass {
 	@Test(enabled = true, groups = { "smoke" })
 	public void search() throws InterruptedException {
-		SearchPage sp = new SearchPage(driver);
-		BookCabPage bcp = new BookCabPage(driver);
-		sp.clickcab();
-		sp.setFromTab("Delhi");
+		// Creating a searchPage object
+		SearchPage sp = new SearchPage(driver); 
+		
+		// Creating a BookCabPage object
+		BookCabPage bcp = new BookCabPage(driver); 
+		
+		// Clicking on Cab
+		sp.clickcab(); 
+		
+		// Setting from location Delhi
+		sp.setFromTab("Delhi"); 
 		Thread.sleep(3000);
+		
+		// Selecting the first Suggestion
 		sp.click_first_from_suggestion();
-		sp.setToTab("Manali");
+		
+		// Setting To Location manali
+		sp.setToTab("Manali"); 
 		Thread.sleep(2000);
-		sp.click_first_to_suggestion();
-		sp.setStartDate();
-		sp.SetTime();
-		sp.clickSearch();
-		Assert.assertEquals("Select Filters", bcp.validatePage());
+		// Selecting the first Suggestion
+		sp.click_first_to_suggestion(); 
+		
+		// Select date to onboard
+		sp.setStartDate(); 
+		
+		// Select Time
+		sp.SetTime(); 
+		
+		// Click on Search Button
+		sp.clickSearch(); 
+		
+		// Using Assert Class to check whether the page navigated to next page
+		Assert.assertEquals(bcp.validatePage(), "Select Filters"); 
 		Thread.sleep(2000);
-		bcp.click_checkbox_of_SUV();
-		bcp.ScrollTillLowestSUVTab();
+		
+		// click on SUV checkBox
+		bcp.click_checkbox_of_SUV(); 
+		
+		// Scroll Till First Option of Suv is seen
+		bcp.ScrollTillLowestSUVTab(); 
+		
 		Thread.sleep(1000);
-		System.out.println("MINIMUM PRICE OF SUV :" + bcp.minimum_price());
+		// Print the minimum SUV price on console
+		System.out.println("MINIMUM PRICE OF SUV :" + bcp.minimum_price()); 
 	}
 }
