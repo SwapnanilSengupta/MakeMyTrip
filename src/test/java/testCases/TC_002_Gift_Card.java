@@ -18,16 +18,13 @@ public class TC_002_Gift_Card extends BaseClass {
 	public void enter_wrong_info() throws InterruptedException, IOException {
 		// Creating a searchPage object
 		SearchPage sp = new SearchPage(driver);
+
+		Thread.sleep(6000);
 		
-		Thread.sleep(8000);
-
-		String handle = driver.getWindowHandle();
-
-		driver.switchTo().frame(sp.frame_handle());
-
-		sp.click_popup_dismiss();
-
-		driver.switchTo().window(handle);
+		
+		closePopUp();
+		
+		Thread.sleep(2000);
 
 		// Scroll Till GiftCard is visible
 		sp.ScrollTillGiftCardTab();
@@ -65,6 +62,8 @@ public class TC_002_Gift_Card extends BaseClass {
 			String message = gcp.getErrorEmailMessage();
 			captureScreenShot(name);
 			Assert.assertEquals("Please enter a valid Email id.", message);
+			System.out.println("ERROR MESSAGE :"+message);
+			System.out.println("---------------------------------------------");
 		}
 	}
 }

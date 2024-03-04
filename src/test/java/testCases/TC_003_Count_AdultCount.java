@@ -11,18 +11,10 @@ public class TC_003_Count_AdultCount extends BaseClass {
 	public void adultCount() throws InterruptedException {
 		// Creating a searchPage object
 		SearchPage sp = new SearchPage(driver);
+
+		Thread.sleep(5000);
 		
-		Thread.sleep(7000);
-
-		String handle = driver.getWindowHandle();
-
-		driver.switchTo().frame(sp.frame_handle());
-
-		sp.click_popup_dismiss();
-
-		driver.switchTo().window(handle);
-
-		Thread.sleep(2000);
+		closePopUp();
 
 		// click on hotel
 		sp.click_hotel_tab();
@@ -32,6 +24,7 @@ public class TC_003_Count_AdultCount extends BaseClass {
 
 		// Printing the max allowed adult in guest selection
 		System.out.println("Total Adult Count :" + sp.getAdultCount());
+		System.out.println("---------------------------------------------");
 		String actual_value = Integer.toString(sp.getAdultCount());
 		sp.click_guest_apply();
 

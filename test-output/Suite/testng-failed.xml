@@ -9,13 +9,6 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testCases.TC_003_Count_AdultCount">
-        <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-          <include name="adultCount"/>
-        </methods>
-      </class> <!-- testCases.TC_003_Count_AdultCount -->
       <class name="testCases.TC_001_Book_SUV">
         <methods>
           <include name="teardown"/>

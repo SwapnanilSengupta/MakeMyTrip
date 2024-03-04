@@ -21,6 +21,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
+import pageObjects.SearchPage;
+
 public class BaseClass {
 	public static WebDriver driver;
 
@@ -77,6 +79,19 @@ public class BaseClass {
 		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(screenshot, new File(
 				"C:\\Users\\2310300\\eclipse-workspace\\Cognizant_Hackathon_Make_My_Trip\\ScreenShots\\"+file+".png"));
+	}
+	
+	public static void closePopUp()
+	{
+		SearchPage sp = new SearchPage(driver);
+		
+		String handle = driver.getWindowHandle();
+
+		driver.switchTo().frame(sp.frame_handle());
+
+		sp.click_popup_dismiss();
+
+		driver.switchTo().window(handle);
 	}
 
 	public void refresh() {

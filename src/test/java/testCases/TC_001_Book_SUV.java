@@ -15,18 +15,14 @@ public class TC_001_Book_SUV extends BaseClass {
 
 		// Creating a BookCabPage object
 		BookCabPage bcp = new BookCabPage(driver);
-		
+
 		Thread.sleep(5000);
-
-		String handle = driver.getWindowHandle();
-
-		driver.switchTo().frame(sp.frame_handle());
-
-		sp.click_popup_dismiss();
-
-		driver.switchTo().window(handle);
+		
+		closePopUp();
 
 		// Clicking on Cab
+		
+		
 		sp.clickcab();
 
 		// Setting from location Delhi
@@ -64,5 +60,6 @@ public class TC_001_Book_SUV extends BaseClass {
 		Thread.sleep(1000);
 		// Print the minimum SUV price on console
 		System.out.println("MINIMUM PRICE OF SUV :" + bcp.minimum_price());
+		System.out.println("---------------------------------------------");
 	}
 }
