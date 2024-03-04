@@ -19,29 +19,39 @@ public class TC_002_Gift_Card extends BaseClass {
 		// Creating a searchPage object
 		SearchPage sp = new SearchPage(driver);
 		
+		Thread.sleep(8000);
+
+		String handle = driver.getWindowHandle();
+
+		driver.switchTo().frame(sp.frame_handle());
+
+		sp.click_popup_dismiss();
+
+		driver.switchTo().window(handle);
+
 		// Scroll Till GiftCard is visible
 		sp.ScrollTillGiftCardTab();
 		Thread.sleep(2000);
-		
-		//Clicking on GiftCard
+
+		// Clicking on GiftCard
 		sp.click_gift_card();
-		
-		//Storing Window Handle of next page
+
+		// Storing Window Handle of next page
 		Set<String> win_handles = driver.getWindowHandles();
 		List<String> win_handles_list = new ArrayList<String>(win_handles);
-		
+
 		//// Creating a GiftCardPage object
 		GiftCardsPage gcp = new GiftCardsPage(driver.switchTo().window(win_handles_list.get(1)));
 		Thread.sleep(2000);
-		
-		//Scrolling till BirthdayCard is visible
+
+		// Scrolling till BirthdayCard is visible
 		gcp.ScrollTillBirthDayCardTab();
 		Thread.sleep(2000);
-		
-		//Click on birthday Card
+
+		// Click on birthday Card
 		gcp.click_birthday_gift_card();
-		
-		//Using ExcelUtility file for excel operation
+
+		// Using ExcelUtility file for excel operation
 		ExcelUtility eu = new ExcelUtility(
 				"C:\\Users\\2310300\\eclipse-workspace\\Cognizant_Hackathon_Make_My_Trip\\ExcelSheets\\User_Credential.xlsx");
 		int row_num = eu.getRowCount("Sheet1");
@@ -54,7 +64,7 @@ public class TC_002_Gift_Card extends BaseClass {
 			Thread.sleep(3000);
 			String message = gcp.getErrorEmailMessage();
 			captureScreenShot(name);
-			Assert.assertEquals(message, "Please enter a valid Email id.");
+			Assert.assertEquals("Please enter a valid Email id.", message);
 		}
 	}
 }

@@ -26,7 +26,7 @@ public class BaseClass {
 
 	@BeforeClass()
 	@Parameters({ "browser", "os", "enviroment" })
-	public void setup(String browser, String os, String env) throws MalformedURLException {
+	public void setup(String browser, String os, String env) throws MalformedURLException, InterruptedException {
 		
 		DesiredCapabilities cap = new DesiredCapabilities();
 		if (env.equalsIgnoreCase("local")) {

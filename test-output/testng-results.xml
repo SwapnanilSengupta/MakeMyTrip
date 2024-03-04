@@ -2,7 +2,7 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-02T20:14:26 IST" name="Suite" finished-at="2024-03-02T20:15:25 IST" duration-ms="58467">
+  <suite started-at="2024-03-04T11:50:13 IST" name="Suite" finished-at="2024-03-04T11:51:56 IST" duration-ms="102412">
     <groups>
       <group name="regression">
         <method signature="TC_002_Gift_Card.enter_wrong_info()[pri:0, instance:testCases.TC_002_Gift_Card@6e4566f1]" name="enter_wrong_info" class="testCases.TC_002_Gift_Card"/>
@@ -12,9 +12,9 @@
         <method signature="TC_003_Count_AdultCount.adultCount()[pri:0, instance:testCases.TC_003_Count_AdultCount@4b6e2263]" name="adultCount" class="testCases.TC_003_Count_AdultCount"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2024-03-02T20:14:26 IST" name="Test" finished-at="2024-03-02T20:15:25 IST" duration-ms="58467">
+    <test started-at="2024-03-04T11:50:13 IST" name="Test" finished-at="2024-03-04T11:51:56 IST" duration-ms="102412">
       <class name="testCases.TC_002_Gift_Card">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_002_Gift_Card@6e4566f1]" started-at="2024-03-02T20:14:50 IST" name="setup" finished-at="2024-03-02T20:14:57 IST" duration-ms="6299" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_002_Gift_Card@6e4566f1]" started-at="2024-03-04T11:50:56 IST" name="setup" finished-at="2024-03-04T11:51:08 IST" duration-ms="11433" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -35,17 +35,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="enter_wrong_info()[pri:0, instance:testCases.TC_002_Gift_Card@6e4566f1]" started-at="2024-03-02T20:14:57 IST" name="enter_wrong_info" finished-at="2024-03-02T20:15:09 IST" duration-ms="11933" status="PASS">
+        <test-method signature="enter_wrong_info()[pri:0, instance:testCases.TC_002_Gift_Card@6e4566f1]" started-at="2024-03-04T11:51:08 IST" name="enter_wrong_info" finished-at="2024-03-04T11:51:29 IST" duration-ms="21203" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enter_wrong_info -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC_002_Gift_Card@6e4566f1]" started-at="2024-03-02T20:15:09 IST" name="teardown" finished-at="2024-03-02T20:15:13 IST" duration-ms="3983" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC_002_Gift_Card@6e4566f1]" started-at="2024-03-04T11:51:29 IST" name="teardown" finished-at="2024-03-04T11:51:33 IST" duration-ms="4111" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- testCases.TC_002_Gift_Card -->
       <class name="testCases.TC_003_Count_AdultCount">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_003_Count_AdultCount@4b6e2263]" started-at="2024-03-02T20:15:13 IST" name="setup" finished-at="2024-03-02T20:15:19 IST" duration-ms="6538" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_003_Count_AdultCount@4b6e2263]" started-at="2024-03-04T11:51:33 IST" name="setup" finished-at="2024-03-04T11:51:42 IST" duration-ms="9105" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -66,17 +66,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="adultCount()[pri:0, instance:testCases.TC_003_Count_AdultCount@4b6e2263]" started-at="2024-03-02T20:15:19 IST" name="adultCount" finished-at="2024-03-02T20:15:22 IST" duration-ms="2639" status="PASS">
+        <test-method signature="adultCount()[pri:0, instance:testCases.TC_003_Count_AdultCount@4b6e2263]" started-at="2024-03-04T11:51:42 IST" name="adultCount" finished-at="2024-03-04T11:51:52 IST" duration-ms="10294" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- adultCount -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC_003_Count_AdultCount@4b6e2263]" started-at="2024-03-02T20:15:22 IST" name="teardown" finished-at="2024-03-02T20:15:25 IST" duration-ms="2969" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC_003_Count_AdultCount@4b6e2263]" started-at="2024-03-04T11:51:52 IST" name="teardown" finished-at="2024-03-04T11:51:56 IST" duration-ms="3427" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- testCases.TC_003_Count_AdultCount -->
       <class name="testCases.TC_001_Book_SUV">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_001_Book_SUV@22356acd]" started-at="2024-03-02T20:14:26 IST" name="setup" finished-at="2024-03-02T20:14:33 IST" duration-ms="6538" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_001_Book_SUV@22356acd]" started-at="2024-03-04T11:50:14 IST" name="setup" finished-at="2024-03-04T11:50:30 IST" duration-ms="16693" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -97,11 +97,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="search()[pri:0, instance:testCases.TC_001_Book_SUV@22356acd]" started-at="2024-03-02T20:14:33 IST" name="search" finished-at="2024-03-02T20:14:46 IST" duration-ms="13401" status="PASS">
+        <test-method signature="search()[pri:0, instance:testCases.TC_001_Book_SUV@22356acd]" started-at="2024-03-04T11:50:30 IST" name="search" finished-at="2024-03-04T11:50:52 IST" duration-ms="21472" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC_001_Book_SUV@22356acd]" started-at="2024-03-02T20:14:46 IST" name="teardown" finished-at="2024-03-02T20:14:50 IST" duration-ms="3860" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC_001_Book_SUV@22356acd]" started-at="2024-03-04T11:50:52 IST" name="teardown" finished-at="2024-03-04T11:50:56 IST" duration-ms="4193" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

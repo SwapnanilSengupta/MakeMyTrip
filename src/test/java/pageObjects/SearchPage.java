@@ -68,6 +68,12 @@ public class SearchPage extends BasePage {
 	@FindBy(xpath = "//a[normalize-space()='Search']")
 	WebElement giftTab;
 
+	@FindBy(id = "webklipper-publisher-widget-container-notification-frame")
+	WebElement pop_frame;
+
+	@FindBy(xpath = "//i[@class='wewidgeticon we_close']")
+	WebElement frame_dismiss;
+
 	public void clickcab() {
 		cab_tab.click();
 	}
@@ -134,5 +140,14 @@ public class SearchPage extends BasePage {
 	public void ScrollTillGiftCardTab() {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("arguments[0].scrollIntoView(true);", giftTab);
+	}
+
+	public WebElement frame_handle() {
+		return pop_frame;
+	}
+
+	public void click_popup_dismiss() {
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		jse.executeScript("arguments[0].click();", frame_dismiss);
 	}
 }

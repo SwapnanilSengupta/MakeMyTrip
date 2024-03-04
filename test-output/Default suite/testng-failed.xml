@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.TC_002_Gift_Card">
+      <class name="testCases.TC_001_Book_SUV">
         <methods>
           <include name="teardown"/>
           <include name="setup"/>
-          <include name="enter_wrong_info"/>
+          <include name="search"/>
         </methods>
-      </class> <!-- testCases.TC_002_Gift_Card -->
+      </class> <!-- testCases.TC_001_Book_SUV -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
